@@ -61,6 +61,7 @@ RUN mkdir -p /run/php
 VOLUME /var/www/html
 
 # Ports: nginx
-EXPOSE 80 #443
+EXPOSE 80
+#443
 
 CMD ["/usr/bin/supervisord"]
