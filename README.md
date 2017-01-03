@@ -1,24 +1,29 @@
 # docker-ubuntu16-nginx-php7
 A docker image based on Ubuntu 16.04 with Nginx + PHP 7.0 (FPM) that uses supervisor as process manager.
 
-## Building
+## Pull the image
 
-For building the image from source, clone the repository and run docker build
+Pull the latest stable version from the [Docker Hub Registry](https://hub.docker.com/r/francarmona/docker-ubuntu16-nginx-php7/)
+```
+docker pull francarmona/docker-ubuntu16-nginx-php7:latest
+```
+
+If you prefer building the image from source, clone the repository and run docker build
 
 ```
 git clone https://github.com/franCarmona/docker-ubuntu16-nginx-php7.git
-docker build -t nginx-php7 .
+docker build -t francarmona/docker-ubuntu16-nginx-php7 .
 ```
 
-## Running
+## Run
 
 After building the image, run the container.
 ```
-docker run --name nginx-php7-fpm -v ~/path/to/code:/var/www/html -d -p [host-port]:80 nginx-php7
+docker run --name nginx-php7-fpm -v ~/path/to/code:/var/www/html -d -p [host-port]:80 francarmona/docker-ubuntu16-nginx-php7
 ```
 Browse to [http://localhost:[host-port]](http://localhost:[host-port]) to view your app.
 
-## Using as a base image [TODO]
+## Use as a base image [TODO]
 
 Overwrite nginx config files,....
 
