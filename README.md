@@ -23,9 +23,20 @@ docker run --name nginx-php7-fpm -v ~/path/to/code:/var/www/html -d -p [host-por
 ```
 Browse to [http://localhost:[host-port]](http://localhost:[host-port]) to view your app.
 
-## Use as a base image [TODO]
+## Use as a base image
 
-Overwrite nginx config files,....
+Some cases will be necessary to create a new image using this one as the base, for example to overwrite configuration files.
+
+```Dockerfile
+FROM francarmona/docker-ubuntu16-nginx-php7
+
+MAINTAINER Your Name <your@email>
+
+# Nginx site conf
+ADD config/nginx/nginx-site.conf /etc/nginx/sites-available/default
+ADD config/nginx/nginx.conf /etc/nginx/nginx.conf
+```
+
 
 ## Exposed ports
 
