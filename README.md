@@ -27,6 +27,8 @@ Browse to [http://localhost:[host-port]](http://localhost:[host-port]) to view y
 
 Some cases will be necessary to create a new image using this one as the base, for example to overwrite configuration files.
 
+Create a Dockerfile with following content and then build the image.
+
 ```Dockerfile
 FROM francarmona/docker-ubuntu16-nginx-php7
 
